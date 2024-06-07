@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    /*
+      esModuleInterop allows to work with packages that use commonjs
+      import Moment from 'moment' without esModuleInterop is undefined
+    */
+    "esModuleInterop": true,
+    /*
+      if some library doesn't have a default import
+      such loaders as ts-loader or babel-loader automatically
+      create them instead of this import
+      instead of import * as React from 'react'
+      we can write import React from 'react'
+    */
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
