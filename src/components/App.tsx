@@ -32,7 +32,7 @@ export const App = () => {
       <img width={100} height={100} src={avatarPng} alt="avatar" />
       <img width={100} height={100} src={avatarJpg} alt="avatar" />
       <div>
-        <Snail width={100} height={100} fill="red" />
+        <Snail width={100} height={100} fill="magenta" />
       </div>
       <Link to="/about">about</Link>
       <br />

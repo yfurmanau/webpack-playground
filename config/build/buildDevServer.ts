@@ -10,5 +10,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     // if you want to expose static files through nginx
     // you need to proxy index.html
     historyApiFallback: true,
+    hot: true,
   };
 }
