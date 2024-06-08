@@ -18,7 +18,11 @@
       instead of import * as React from 'react'
       we can write import React from 'react'
     */
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {

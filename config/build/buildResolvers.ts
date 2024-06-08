@@ -7,5 +7,8 @@ export function buildResolvers(
 ): Configuration["resolve"] {
   return {
     extensions: [".ts", ".tsx", ".js"],
+    alias: {
+      "@": options.paths.src,
+    },
   };
 }
