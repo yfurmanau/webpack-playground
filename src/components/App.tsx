@@ -10,8 +10,25 @@ export const App = () => {
 
   const increment = () => setCount((prev) => prev + 1);
 
+  // tree shaking
+  // unused code does not appear in bundle file
+  // if it's a desktop platform everything that is in if with mobile
+  // will not be included to bundle file
+  if (__PLATFORM__ === "desktop") {
+    return <div>ISDESKTOPPLATFORM</div>;
+  }
+
+  if (__PLATFORM__ === "mobile") {
+    return <div>ISMOBILEPLATFORM</div>;
+  }
+
+  if (__ENV__ === "development") {
+    // addDevtools()
+  }
+
   return (
     <div>
+      <h1>PLATFORM={__PLATFORM__}</h1>
       <img width={100} height={100} src={avatarPng} alt="avatar" />
       <img width={100} height={100} src={avatarJpg} alt="avatar" />
       <div>

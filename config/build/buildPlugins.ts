@@ -9,6 +9,7 @@ export function buildPlugins({
   mode,
   paths,
   analyzer,
+  platform,
 }: BuildOptions): Configuration["plugins"] {
   const isDev = mode === "development";
   const isProd = mode === "production";
@@ -16,6 +17,10 @@ export function buildPlugins({
   const plugins: Configuration["plugins"] = [
     new HtmlWebpackPlugin({
       template: paths.html,
+    }),
+    new webpack.DefinePlugin({
+      __PLATFORM__: JSON.stringify(platform),
+      __ENV__: JSON.stringify(mode),
     }),
     // move css to a separate file
     new MiniCssExtractPlugin({
