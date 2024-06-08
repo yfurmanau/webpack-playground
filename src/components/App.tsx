@@ -15,11 +15,11 @@ export const App = () => {
   // if it's a desktop platform everything that is in if with mobile
   // will not be included to bundle file
   if (__PLATFORM__ === "desktop") {
-    return <div>ISDESKTOPPLATFORM</div>;
+    // return <div>ISDESKTOPPLATFORM</div>;
   }
 
   if (__PLATFORM__ === "mobile") {
-    return <div>ISMOBILEPLATFORM</div>;
+    // return <div>ISMOBILEPLATFORM</div>;
   }
 
   if (__ENV__ === "development") {
