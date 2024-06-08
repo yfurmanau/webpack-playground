@@ -5,3 +5,9 @@ declare module "*.module.scss" {
   const classNames: IClassNames;
   export = classNames;
 }
+
+// allows TS to import files with these extensions
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.svg";
