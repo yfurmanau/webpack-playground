@@ -5,6 +5,14 @@ import avatarPng from "@/assets/avatar.png";
 import avatarJpg from "@/assets/avatar.jpg";
 import Snail from "@/assets/animal.svg";
 
+function foo() {
+  bar();
+}
+
+function bar() {
+  throw new Error("Something went wrong");
+}
+
 export const App = () => {
   const [count, setCount] = useState(0);
 
@@ -28,6 +36,7 @@ export const App = () => {
 
   return (
     <div>
+      <button onClick={foo}>Throw an error</button>
       <h1>PLATFORM={__PLATFORM__}</h1>
       <img width={100} height={100} src={avatarPng} alt="avatar" />
       <img width={100} height={100} src={avatarJpg} alt="avatar" />
