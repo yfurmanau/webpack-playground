@@ -41,8 +41,13 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const tsLoader = {
     // ts-loader can work with JSX
     test: /\.tsx?$/,
-    use: "ts-loader",
+    loader: "ts-loader",
     exclude: /node_modules/,
+    options: {
+      // ts is not checked while creating a bundle
+      // that reduces bundle creation
+      transpileOnly: true,
+    },
   };
 
   return [assetLoader, scssLoader, tsLoader, svgrLoader];
